@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Hello Vue</title>
+</head>
+
+<body>
+    <div id="app">
+        <input v-model="name" placeholder="Inserisci il tuo nome" @keyup.enter='hiddenOrVisible'>
+        <button @click="hiddenOrVisible">{{ buttonText }}</button>
+
+        <div :class="classContent">Ciao {{ name }}!</div>
+        <img :class="classContent" :src="imgContent" alt="queen">
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
